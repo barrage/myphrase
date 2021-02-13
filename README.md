@@ -2,7 +2,8 @@ myphrase.sh - a tool to select random words from a source, to generate a strong 
 
 ## Usage
 ```
-./myphrase.sh ./croatian-words.txt [selection_count]
+./myphrase.sh ./croatian-words.txt [select_number_of_words]
+```
 
 ## TODO 
 - entropy enhancements (at this stage it is a simple tool)
