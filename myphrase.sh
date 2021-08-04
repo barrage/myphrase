@@ -29,7 +29,7 @@ main() {
         echo "Warning: source contains only $wordcount unique words, which is below the limit of 7776 to ensure a strong passphrase"
     fi
 
-    cat $source | tr -cs A-Za-z '\n' | tr A-Z a-z | sort | uniq | shuf --random-source=/dev/random -n$select_number_of_words | awk '{print}' ORS=' '
+    cat $source | tr -cs A-Za-z '\n' | tr A-Z a-z | sort | uniq | awk 'length($0)==9' | shuf --random-source=/dev/random -n$select_number_of_words | awk '{print}' ORS=' '
     echo '';
 }
 main $@
